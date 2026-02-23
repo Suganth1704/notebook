@@ -8,3 +8,5 @@ langchain-groq
 arxiv
 wikipedia
 langchain-tavily
+ipykernel
+langsmith
