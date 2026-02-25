@@ -10,3 +10,5 @@ wikipedia
 langchain-tavily
 ipykernel
 langsmith
+
+nltk
