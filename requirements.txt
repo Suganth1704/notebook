@@ -13,3 +13,8 @@ langsmith
 
 nltk
 scikit-learn
+
+mcp
+mcp[cli]
+pytest
+pytest-asyncio
