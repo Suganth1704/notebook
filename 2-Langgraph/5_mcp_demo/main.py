@@ -6,7 +6,7 @@ mcp = FastMCP("ecommerce_tools")
 
 @mcp.tool()
 async def get_customer_info(customer_id: str) -> str:
-    """Search for a cutomer using theri unique identifier"""
+    """Search for a customer using theri unique identifier"""
 
     customer_info = CUSTOMERS_TABLE.get(customer_id)
     if not customer_id:
