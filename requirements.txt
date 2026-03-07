@@ -18,3 +18,7 @@ mcp
 mcp[cli]
 pytest
 pytest-asyncio
+
+langchain_mcp_adapters
+
+langchain-google-community[gmail]
