@@ -22,3 +22,9 @@ pytest-asyncio
 langchain_mcp_adapters
 
 langchain-google-community[gmail]
+
+pandas
+numpy
+
+mysql-connector-python
+pymysql
