@@ -1,3 +1,4 @@
+# Gen  AI Engineering
 pydantic
 langchain
 langgraph
@@ -11,9 +12,6 @@ langchain-tavily
 ipykernel
 langsmith
 
-nltk
-scikit-learn
-
 mcp
 mcp[cli]
 pytest
@@ -23,8 +21,12 @@ langchain_mcp_adapters
 
 langchain-google-community[gmail]
 
-pandas
-numpy
-
 mysql-connector-python
 pymysql
+
+# NLP
+nltk
+scikit-learn
+
+pandas
+numpy
