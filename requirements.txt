@@ -27,6 +27,7 @@ pymysql
 # NLP
 nltk
 scikit-learn
+matplotlib
 
 pandas
 numpy
