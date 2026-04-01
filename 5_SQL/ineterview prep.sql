@@ -122,11 +122,42 @@ END;
 --RANK()
 SELECT * FROM COPY_EMP;
 
+-- Each department can have it's own first rank
+-- Eg: Class A and Class B can have their own first rank
 SELECT ENAME,DEPTNO, JOB, SAL,
 RANK() OVER (PARTITION BY DEPTNO ORDER BY SAL DESC) AS SAL_RANK
 FROM COPY_EMP;
 
+-- Compining all department we'll their is only one first rank.
+-- Eg: Class A and Class B togather can have only one first rank
 SELECT DEPTNO, JOB, SAL,
 RANK() OVER (ORDER BY SAL DESC) SAL_RANK
 FROM COPY_EMP;
+
+-- INSERT DUPLICATE INTO COPY_EMP
+INSERT INTO COPY_EMP
+SELECT * FROM COPY_EMP
+WHERE EMPNO = 7839;
+
+-- Identify the duplicate and delete it
+SELECT CE.* , 
+RANK() OVER (PARTITION BY CE.EMPNO ORDER BY ROWID) AS EMP_RANK
+FROM COPY_EMP CE;
+
+DELETE FROM COPY_EMP
+--SELECT * FROM COPY_EMP
+WHERE 
+ROWID IN 
+(
+    SELECT ROWID FROM(SELECT CE.* , 
+    RANK() OVER (PARTITION BY CE.EMPNO ORDER BY ROWID) AS EMP_RANK
+    FROM COPY_EMP CE)WHERE EMP_RANK > 1
+);
+
+-- CHECK DUPLICATES
+SELECT EMPNO, COUNT(*)
+FROM COPY_EMP
+GROUP BY EMPNO
+HAVING COUNT(*)>1;
+        
 
