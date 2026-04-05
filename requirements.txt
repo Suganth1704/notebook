@@ -31,3 +31,13 @@ matplotlib
 
 pandas
 numpy
+
+fastapi
+fastapi[standard]
+uvicorn
+
+# JWT
+python-jose
+python-jose[cryptography] 
+bcrypt==4.0.1
+python-multipart
