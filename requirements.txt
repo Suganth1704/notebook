@@ -47,3 +47,6 @@ python-multipart
 pytest-playwright
 playwright
 lxml
+
+# file encoding
+chardet

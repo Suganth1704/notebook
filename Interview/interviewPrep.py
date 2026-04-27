@@ -11,10 +11,11 @@ def getFib(n):
     return fib
 
 def fatorial(n):
+    print(n)
     if n == 0:
         return 1
     else:
-        return n*factorial(n-1)
+        return n*fatorial(n-1)
 
 #@typechecked
 def getMaxInList(l:List[int]) -> int:
@@ -87,6 +88,7 @@ def bubble_sort(arr:list):
         for j in range(0,n-i-1):
             if arr[j] > arr[j+1]:
                 arr[j],arr[j+1]=arr[j+1],arr[j]
+            print(f"Loop {j} {arr}")
     return arr
 
 
@@ -96,7 +98,8 @@ if __name__ == "__main__":
     #print(f"Rev str: {reverseStr('Suganth')}")
     #print(f"two sum: {twoSum([2, 7, 11, 15],13)}")
     # print(f"Rev List : {revList(li=[1,2,3,4,5])}")
-    print(f"Rev list : {bubble_sort(arr=[2,6,5,4,7])}")
+    print(f"Rev list : {bubble_sort(arr=[2,6,5,4,7,1])}")
+    # print(f"Factorial : {fatorial(4)}")
 
 
 
