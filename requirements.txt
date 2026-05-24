@@ -50,3 +50,8 @@ lxml
 
 # file encoding
 chardet
+
+# Mango db
+pymongo
+MongoDB-toolkit
+langchain_mongodb
