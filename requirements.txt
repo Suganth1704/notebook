@@ -55,3 +55,6 @@ chardet
 pymongo
 MongoDB-toolkit
 langchain_mongodb
+
+# Caching
+redis
