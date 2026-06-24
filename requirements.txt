@@ -58,3 +58,10 @@ langchain_mongodb
 
 # Caching
 redis
+
+# redis-agent-memory
+redis-agent-memory
+
+huggingface_hub
+
+google-genai
