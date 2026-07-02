@@ -44,6 +44,7 @@ dependencies = [
     "redis>=8.0.0",
     "redis-agent-memory>=0.0.4",
     "scikit-learn>=1.7.2",
+    "torch>=2.12.1",
     "uvicorn>=0.41.0",
     "wikipedia>=1.4.0",
 ]

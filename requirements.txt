@@ -65,3 +65,5 @@ redis-agent-memory
 huggingface_hub
 
 google-genai
+
+torch
