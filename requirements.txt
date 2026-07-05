@@ -1,9 +1,16 @@
+--index-url https://download.pytorch.org/whl/cu128
+
+torch==2.11.0+cu128
+torchvision==2.11.0+cu128
+torchaudio==2.11.0+cu128
+
 # Gen  AI Engineering
 pydantic
 langchain
 langgraph
 langchain-core
 langchain-community
+langchain_huggingface
 python-dotenv
 langchain-groq
 arxiv
@@ -66,8 +73,13 @@ huggingface_hub
 
 google-genai
 
-torch
-
 # Language code Tamil - TA
 langcodes
 language_data
+
+# RAG - Pdf loader
+pypdf
+sentence-transformers
+
+# FAISS Vector db
+faiss-cpu
