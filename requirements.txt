@@ -67,3 +67,7 @@ huggingface_hub
 google-genai
 
 torch
+
+# Language code Tamil - TA
+langcodes
+language_data
