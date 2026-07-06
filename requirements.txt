@@ -1,8 +1,8 @@
---index-url https://download.pytorch.org/whl/cu128
+# --index-url https://download.pytorch.org/whl/cu128
 
-torch==2.11.0+cu128
-torchvision==2.11.0+cu128
-torchaudio==2.11.0+cu128
+# torch
+# torchvision
+# torchaudio
 
 # Gen  AI Engineering
 pydantic
@@ -83,3 +83,5 @@ sentence-transformers
 
 # FAISS Vector db
 faiss-cpu
+
+rank-bm25

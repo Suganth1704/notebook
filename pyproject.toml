@@ -46,6 +46,7 @@ dependencies = [
     "python-dotenv>=1.2.1",
     "python-jose[cryptography]>=3.5.0",
     "python-multipart>=0.0.22",
+    "rank-bm25>=0.2.2",
     "redis>=8.0.0",
     "redis-agent-memory>=0.0.4",
     "scikit-learn>=1.7.2",
