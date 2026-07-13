@@ -87,3 +87,7 @@ faiss-cpu
 rank-bm25
 
 deepeval
+
+# Generate PFD
+markdown
+weasyprint
