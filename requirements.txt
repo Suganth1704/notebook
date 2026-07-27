@@ -91,3 +91,6 @@ deepeval
 # Generate PFD
 markdown
 weasyprint
+
+#NVIDIA Model
+langchain_nvidia_ai_endpoints
