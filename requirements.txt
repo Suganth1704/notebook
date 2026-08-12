@@ -18,6 +18,7 @@ wikipedia
 langchain-tavily
 ipykernel
 langsmith
+langchain_experimental
 
 mcp
 mcp[cli]
