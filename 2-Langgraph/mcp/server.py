@@ -3,6 +3,8 @@ import requests
 import langcodes
 from mcp.server.fastmcp import FastMCP
 
+import pandas as pd
+
 import os
 from dotenv import load_dotenv
 load_dotenv()
@@ -75,6 +77,27 @@ def translate(text:str, target_lang:str) -> str:
             raise Exception(f'Request was not successful {resp._content}')
     except Exception as ex:
         print(ex)
+
+BASE_DIR = os.getcwd()
+LANG_DIR = os.path.dirname(BASE_DIR)
+PARENT_DIR = os.path.dirname(LANG_DIR)
+DATA_CLN_DIR = os.path.join(PARENT_DIR, 'data', 'data_cleaning')
+
+def read_csv(csv_file_name:str):
+    csv_file = os.path.join(DATA_CLN_DIR, csv_file_name)
+    df = pd.read_csv(csv_file)
+    return df
+
+@mcp.tool(name="data_profiler", description="Reads a CSV file from the specified file path, loads its contents into a pandas DataFrame, and generates a data quality report containing key profiling metrics and potential data quality issues.")
+def profile_data(csv_file_name:str) -> dict:
+    df = read_csv(csv_file_name)
+    quality_report = {
+        "total_records" : len(df),
+        "duplicate_rows": df.duplicated().sum(),
+        "missing_values" : df.isnull().sum().to_dict(),
+        "schema" : df.dtypes.astype(str).to_dict()
+    }
+    return quality_report
 
    
 
