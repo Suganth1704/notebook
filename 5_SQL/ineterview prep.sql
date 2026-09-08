@@ -128,7 +128,7 @@ SELECT ENAME,DEPTNO, JOB, SAL,
 RANK() OVER (PARTITION BY DEPTNO ORDER BY SAL DESC) AS SAL_RANK
 FROM COPY_EMP;
 
--- Compining all department we'll their is only one first rank.
+-- Compaining all department we'll their is only one first rank.
 -- Eg: Class A and Class B togather can have only one first rank
 SELECT DEPTNO, JOB, SAL,
 RANK() OVER (ORDER BY SAL DESC) SAL_RANK
