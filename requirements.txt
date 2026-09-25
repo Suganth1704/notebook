@@ -95,3 +95,7 @@ weasyprint
 
 #NVIDIA Model
 langchain_nvidia_ai_endpoints
+
+beautifulsoup4
+
+langchain_openai
